@@ -29,7 +29,6 @@
         </div>
       </nav>
     </div>
-
     <div class="text">
       <div class="tverde">
         <h2 class="h2">REAL ESTATE</h2>
@@ -106,7 +105,7 @@ export default {
         flex-flow: row nowrap;
         align-items: center;
         justify-content: flex-end;
-        gap: 25%;
+        gap: 15%;
         .activo{/*quando o botão estiver ativo */
           /*para suavizar o efeito apenas retirei a altura e depois adicionei com um transition */
           /*display: block;*/
@@ -254,7 +253,6 @@ export default {
       }
     }
   }
-
   .btn{
     cursor: pointer;
     padding: 16px 48px 15px;
@@ -289,5 +287,77 @@ export default {
       box-shadow: 0px 0px 20px rgba(105, 185, 157, 0.58);
     }
   }
+  @media screen and (max-width:1000px){
+    .header .nav.activo{/*quando o botão estiver ativo */
+      /*para suavizar o efeito apenas retirei a altura e depois adicionei com um transition */
+      /*display: block;*/
+      height: 90vh;
+      pointer-events: auto;
+      .ul{
+        flex-direction: column;
+      }
+    }
+
+    .header .li{
+      margin: 1em 0;
+    }
+    .navigation .button {
+      display: block; 
+      cursor: pointer;
+    }
+    .nav{
+      height: 0vh;
+    }
+    .navigation {
+      width:auto;
+      padding: 1em;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: column;
+    }
+    .wrapper{
+      width: 95%;
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .header .nav {
+      width: 100%;
+      /* display: none; */
+      overflow: hidden;
+      pointer-events: none;
+      transition: all 0.5s ease-in-out;
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      justify-content: space-evenly;
+      /* gap: 25%; */
+      flex-direction: column;
+    }
+}
+
+  @media(max-width:1000px) {
+    .header {
+      height: auto;
+      .text .title {
+        width: auto; 
+      }
+      .epc .search {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: flex-start;
+        justify-content: space-around;
+        padding: 1em;
+        background: #FEFEFF;
+        gap: 50px;
+        box-shadow: 35px 35px 65px rgb(146 106 120 / 16%);
+        flex-direction: column;
+      }
+    }
+  }
+
 
 </style>

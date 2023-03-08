@@ -1,14 +1,16 @@
 <template>
   <MainHeader></MainHeader>
+  <BestRecomendation></BestRecomendation>
 </template>
 
 <script>
 import MainHeader from './components/MainHeader.vue'
-
+import BestRecomendation from './components/BestRecomendation.vue'
 export default {
   name: 'App',
   components: {
-    MainHeader
+    MainHeader,
+    BestRecomendation
   }
 }
 </script>
